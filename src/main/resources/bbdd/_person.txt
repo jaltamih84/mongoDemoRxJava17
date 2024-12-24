@@ -1,0 +1,30 @@
+{
+	"firstName":"Juan",
+	"lastName": "Flores",
+	"phoneNumber": "014567855",
+	"documentType": 1,
+	"documentNumber": 45568822,
+	"age": 29,
+	"emeal": "jflores123@gmail.com",
+	"statusCivil": "soltero"
+},
+{
+	"firstName":"Carlos",
+	"lastName": "Salas",
+	"phoneNumber": "014567855",
+	"documentType": 1,
+	"documentNumber": 12345678,
+	"age": 35,
+	"emeal": "csalas123@gmail.com",
+	"statusCivil": "soltero"
+},
+{
+	"firstName":"Pedro",
+	"lastName": "Perez",
+	"phoneNumber": "014567855",
+	"documentType": 1,
+	"documentNumber": 55662233,
+	"age": 41,
+	"emeal": "pperez123@gmail.com",
+	"statusCivil": "soltero"
+},

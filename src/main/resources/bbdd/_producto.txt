@@ -1,0 +1,36 @@
+{
+	"id":"1",
+	"type":1,
+	"description":"Ahorro",
+	"status":1
+},
+{
+	"id":"2",
+	"type":1,
+	"description":"Cuenta corriente",
+	"status":1
+},
+{
+	"id":"3",
+	"type":1,
+	"description":"Plazo fijo",
+	"status":1
+},
+{
+	"id":"4",
+	"type":2,
+	"description":"Personal",
+	"status":1
+},
+{
+	"id":"5",
+	"type":2,
+	"description":"Empresarial",
+	"status":1
+},
+{
+	"id":"6",
+	"type":2,
+	"description":"Tarjeta de Credito personal o empresarial",
+	"status":1
+},

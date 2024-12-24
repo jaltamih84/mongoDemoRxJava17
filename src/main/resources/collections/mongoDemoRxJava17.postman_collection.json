@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "e6c46b2c-772e-4127-8b5e-068de697b894",
+		"name": "mongoDemoRxJava17",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8430061"
+	},
+	"item": [
+		{
+			"name": "getPerson",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9080/ap/webrx/java17/person/676a2dffc6eb1486b948877f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9080",
+					"path": [
+						"ap",
+						"webrx",
+						"java17",
+						"person",
+						"676a2dffc6eb1486b948877f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "persons",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9080/ap/webrx/java17/persons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9080",
+					"path": [
+						"ap",
+						"webrx",
+						"java17",
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postPerson",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"firstName\":\"Julio\",\r\n\t\"lastName\": \"Bazan\",\r\n\t\"phoneNumber\": \"014567855\",\r\n\t\"document\":{\r\n        \"type\" : 1,\r\n        \"number\": 42587788\r\n    },\r\n\t\"age\": 41,\r\n\t\"emeal\": \"jbazan123@gmail.com\",\r\n\t\"statusCivil\": \"casado\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9080/ap/webrx/java17/person",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9080",
+					"path": [
+						"ap",
+						"webrx",
+						"java17",
+						"person"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getClient",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9080/api/bank/client/02ddf01f-508b-4d7e-9938-26fbceb8e7c8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9080",
+					"path": [
+						"api",
+						"bank",
+						"client",
+						"02ddf01f-508b-4d7e-9938-26fbceb8e7c8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveClient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"account\":\"0123456789\",\r\n\t\"type\": {\r\n\t\t\"code\": \"1\",\r\n\t\t\"description\":\"personal\"\r\n\t},\r\n\t\"person\":{\r\n\t\t\"personaId\":\"123456\",\r\n\t\t\"firstName\":\"Pedro\",\r\n\t\t\"lastName\":\"Perez\",\r\n\t\t\"phoneNumber\":\"014567855\",\r\n\t\t\"document\":{\r\n\t\t\t\"type\":1,\r\n\t\t\t\"number\":55662233\r\n\t\t},\r\n\t\t\"age\":\"41\",\r\n\t\t\"emeal\":\"pperez123@gmail.com\",\r\n\t\t\"statusCivil\":\"soltero\"\r\n\t},\r\n\t\"active\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9080/api/bank/client",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9080",
+					"path": [
+						"api",
+						"bank",
+						"client"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

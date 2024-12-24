@@ -1,0 +1,8 @@
+{
+	"id":"1",
+	"description":"pasivos"
+},
+{
+	"id":"2",
+	"description":"activos"
+},

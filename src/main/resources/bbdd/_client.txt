@@ -1,0 +1,63 @@
+{
+	"account":"0123456789",
+	"type": {
+		"code": "1",
+		"description":"personal"
+	},
+	"person":{
+		"personaId":"123456",
+		"firstName":"Juan",
+		"lastName":"Flores",
+		"phoneNumber":"014567855",
+		"document":{
+			"type":1,
+			"number":45568822
+		},
+		"age":"29",
+		"emeal":"jflores123@gmail.com",
+		"statusCivil":"soltero"
+	},
+	"active":1
+},
+{
+	"account":"0123456789",
+	"type": {
+		"code": "1",
+		"description":"personal"
+	},
+	"person":{
+		"personaId":"123456",
+		"firstName":"Carlos",
+		"lastName":"Salas",
+		"phoneNumber":"014567855",
+		"document":{
+			"type":1,
+			"number":12345678
+		},
+		"age":"35",
+		"emeal":"csalas123@gmail.com",
+		"statusCivil":"soltero"
+	},
+	"active":1
+},
+{
+	"account":"0123456789",
+	"type": {
+		"code": "1",
+		"description":"personal"
+	},
+	"person":{
+		"personaId":"123456",
+		"firstName":"Pedro",
+		"lastName":"Perez",
+		"phoneNumber":"014567855",
+		"document":{
+			"type":1,
+			"number":55662233
+		},
+		"age":"41",
+		"emeal":"pperez123@gmail.com",
+		"statusCivil":"soltero"
+	},
+	"active":1
+}
