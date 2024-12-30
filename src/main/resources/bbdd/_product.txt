@@ -1,0 +1,36 @@
+{
+	"code":"ahorro",
+	"description":"Cuenta Ahorro",
+	"type": 1,
+	"status": 1
+},
+{
+	"code":"cc",
+	"description":"Cuenta Corriente",
+	"type": 1,
+	"status": 1
+},
+{
+	"code":"pf",
+	"description":"Cuenta Plazo Fijo",
+	"type": 1,
+	"status": 1
+},
+{
+	"code":"creper",
+	"description":"Credito Personal",
+	"type": 2,
+	"status": 1
+},
+{
+	"code":"crepemp",
+	"description":"Credito Empresarial",
+	"type": 2,
+	"status": 1
+},
+{
+	"code":"tarjeta",
+	"description":"Tarjeta de Credito",
+	"type": 2,
+	"status": 1
+},

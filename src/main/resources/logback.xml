@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- Appender para la consola -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %level - - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Appender para un archivo -->
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>logs/mongoDemoRxJava17.log</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Root logger que maneja los niveles de log -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </root>
+
+    <!-- Logger específico para un paquete (por ejemplo, de una API REST) -->
+    <logger name="com.webapp.banca.demo.dao" level="DEBUG">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+
+</configuration>

@@ -17,7 +17,7 @@ import io.reactivex.rxjava3.core.Maybe;
 import lombok.extern.slf4j.Slf4j;
 
 @RestController
-@RequestMapping("/ap/webrx/java17")
+@RequestMapping("/api/bank/")
 @Slf4j
 public class PersonController {
 	
