@@ -31,8 +31,6 @@ public class AccountMapper {
                 .productCode(accountEntity.getProductCode())
                 .flagComision(accountEntity.getFlagComision())
                 .maxOperation(accountEntity.getMaxOperation())
-                //.startDate(Utilitary.getDateFromString(accountEntity.getStartDate()))
-                //.endDate(Utilitary.plusMonths(Utilitary.getDateFromString(accountEntity.getStartDate()), Utilitary.months_validity))
                 .startDate(accountEntity.getStartDate())
                 .endDate(accountEntity.getEndDate())
                 .balance(accountEntity.getBalance())
