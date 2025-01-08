@@ -9,13 +9,18 @@ public class Utilitary {
 
     public static int months_validity = 3;
 
-    public static Date getDateFromString(String dateStr){
+    public static Date getDateFromStringFormat(String dateStr){
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         try {
             return sdf.parse(dateStr);
         } catch (ParseException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public static String getStringFromDateFormat(Date date){
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        return sdf.format(date);
     }
 
     public static Date plusMonths(Date date, int months){

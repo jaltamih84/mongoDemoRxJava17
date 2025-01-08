@@ -2,6 +2,7 @@ package com.webapp.banca.demo.model.domain;
 
 import lombok.*;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 @Data
@@ -17,7 +18,7 @@ public class Account {
     private int maxOperation;
     private String startDate;
     private String endDate;
-    private Double balance;
+    private BigDecimal balance;
     private String currency;
     private int active;
 }

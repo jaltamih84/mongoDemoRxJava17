@@ -2,6 +2,8 @@ package com.webapp.banca.demo.model.response;
 
 import lombok.*;
 
+import java.math.BigDecimal;
+
 @Data
 @AllArgsConstructor
 @Builder
@@ -9,5 +11,5 @@ import lombok.*;
 @ToString
 public class BalanceResponse {
     private String clientId;
-    private Double accountBalance;
+    private BigDecimal accountBalance;
 }

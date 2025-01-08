@@ -2,7 +2,9 @@ package com.webapp.banca.demo.expose.web;
 
 import com.webapp.banca.demo.business.AccountService;
 import com.webapp.banca.demo.model.domain.Account;
+import com.webapp.banca.demo.model.request.TransactionRequest;
 import com.webapp.banca.demo.model.response.BalanceResponse;
+import com.webapp.banca.demo.model.response.TransactionResponse;
 import io.reactivex.rxjava3.core.Flowable;
 import io.reactivex.rxjava3.core.Maybe;
 import lombok.extern.slf4j.Slf4j;
@@ -10,6 +12,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/api/bank/")
@@ -47,5 +51,21 @@ public class AccountController {
     public Maybe<Account> postAccount(@RequestBody Account account) {
         logger.info("Procesando la solicitud para /api/bank/account");
         return this.accountService.insert(account);
+    }
+
+    @PostMapping(value = "account/{accountId}/withdraw",
+            produces = {"application/json"})
+    public Maybe<TransactionResponse> postWithdraw(@Valid @RequestBody TransactionRequest request,
+                                                   @PathVariable String accountId) {
+        logger.info("Procesando la solicitud para /api/bank/account/{accountId}/withdraw");
+        return this.accountService.withdraw(accountId,request.getAmount());
+    }
+
+    @PostMapping(value = "account/{accountId}/deposit",
+            produces = {"application/json"})
+    public Maybe<TransactionResponse> postDeposit(@Valid @RequestBody TransactionRequest request,
+                                                   @PathVariable String accountId) {
+        logger.info("Procesando la solicitud para /api/bank/account/{accountId}/withdraw");
+        return this.accountService.deposit(accountId,request.getAmount());
     }
 }
