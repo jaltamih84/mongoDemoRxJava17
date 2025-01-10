@@ -1,9 +1,9 @@
 package com.webapp.banca.demo.model.request;
 
 
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
-import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 
 

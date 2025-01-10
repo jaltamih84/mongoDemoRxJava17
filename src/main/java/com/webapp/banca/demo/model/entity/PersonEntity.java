@@ -17,7 +17,7 @@ public class PersonEntity {
   private String lastName;
   private String phoneNumber;
   private int documentType;
-  private int documentNumber;
+  private Long documentNumber;
   private int age;
   private String emeal;
   private String statusCivil;

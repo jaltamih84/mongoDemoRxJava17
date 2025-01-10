@@ -8,6 +8,7 @@ class MongoDemoRxJava17ApplicationTests {
 
 	@Test
 	void contextLoads() {
+		System.out.println("Hola");
 	}
 
 }

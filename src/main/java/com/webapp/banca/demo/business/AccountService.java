@@ -1,13 +1,11 @@
 package com.webapp.banca.demo.business;
 
 import com.webapp.banca.demo.model.domain.Account;
-import com.webapp.banca.demo.model.request.TransactionRequest;
 import com.webapp.banca.demo.model.response.BalanceResponse;
 import com.webapp.banca.demo.model.response.TransactionResponse;
 import io.reactivex.rxjava3.core.Flowable;
 import io.reactivex.rxjava3.core.Maybe;
 
-import javax.validation.Valid;
 import java.math.BigDecimal;
 
 public interface AccountService {

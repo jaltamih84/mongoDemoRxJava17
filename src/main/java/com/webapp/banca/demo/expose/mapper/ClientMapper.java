@@ -55,4 +55,12 @@ public class ClientMapper {
                 .active(clientEntity.getActive())
                 .build();
     }
+
+    public ClientType getClientTypeOfClientEntity(ClientEntity clientEntity) {
+        return ClientType.builder()
+                .code(clientEntity.getClientTypeCode())
+                .description(clientEntity.getClientTypeDescription())
+                .build();
+
+    }
 }

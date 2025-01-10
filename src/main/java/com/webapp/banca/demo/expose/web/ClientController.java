@@ -2,13 +2,14 @@ package com.webapp.banca.demo.expose.web;
 
 import com.webapp.banca.demo.business.ClientService;
 import com.webapp.banca.demo.model.domain.Client;
+import com.webapp.banca.demo.model.domain.ClientType;
 import io.reactivex.rxjava3.core.Flowable;
 import io.reactivex.rxjava3.core.Maybe;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/bank/")
@@ -32,6 +33,11 @@ public class ClientController {
     public Flowable<Client> getClients() {
         logger.info("Procesando la solicitud para /api/bank/clients");
         return this.clientService.findAll();
+    }
+
+    @GetMapping("clientsType")
+    public Flowable<ClientType> getClientsByTypeCode() {
+        return clientService.getClientsByTypeCode();
     }
 
     @PostMapping(value = "client",

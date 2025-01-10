@@ -21,7 +21,7 @@ public class ClientEntity {
     private String pLastName;
     private String pPhoneNumber;
     private int documentType;
-    private int documentNumber;
+    private Long documentNumber;
     private int pAge;
     private String pEmeal;
     private String pStatusCivil;

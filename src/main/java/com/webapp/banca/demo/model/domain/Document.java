@@ -9,5 +9,5 @@ import lombok.*;
 @ToString
 public class Document {
   private int type;
-  private int number;
+  private Long number;
 }

@@ -57,6 +57,22 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- JUnit dependency -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.9.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Mockito dependency -->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>5.0.0</version>
+            <scope>test</scope>
+        </dependency>
+
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
@@ -141,12 +157,6 @@
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.8</version>
                 <!--Exclusiones para reporte de cobertura-->
-                <configuration>
-                    <excludes>
-                        <exclude>com/webapp/banca/demo/MongoDemoRxJava17ApplicationTests.class</exclude>
-                    </excludes>
-                </configuration>
-                <!--Exclusiones para reporte de cobertura-->
                 <executions>
                     <execution>
                         <goals>
@@ -161,6 +171,27 @@
                         </goals>
                     </execution>
                 </executions>
+                <!--Exclusiones para reporte de cobertura-->
+                <configuration>
+                    <rules>
+                        <rule>
+                            <element>BUNDLE</element>
+                            <limits>
+                                <limit>
+                                    <counter>INSTRUCTION</counter>
+                                    <value>COVEREDRATIO</value>
+                                    <minimum>0.70</minimum><!-- Cobertura mínima del 70% -->
+                                </limit>
+                            </limits>
+                        </rule>
+                    </rules>
+                    <excludes>
+                        <!-- Excluir paquete completo -->
+                        <exclude>com/webapp/banca/demo/expose/web/*</exclude>
+                        <!-- Excluir una clase específica -->
+                        <exclude>com/webapp/banca/demo/MongoDemoRxJava17ApplicationTests.class</exclude>
+                    </excludes>
+                </configuration>
             </plugin>
         </plugins>
     </build>
