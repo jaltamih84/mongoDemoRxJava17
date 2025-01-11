@@ -58,4 +58,16 @@
 	"age": 41,
 	"emeal": "pperez123@gmail.com",
 	"statusCivil": "soltero"
+},
+{
+	"firstName":"Ruth",
+	"lastName": "Araujo",
+	"phoneNumber": "924557566",
+	"document":{
+        "type" : 2,
+        "number": 10700407701
+    },
+	"age": 30,
+	"emeal": "arateruty@gmail.com",
+	"statusCivil": "soltero"
 }

@@ -1,0 +1,15 @@
+{
+  "clave": "map-parametros:ca",
+  "valor": "Cuenta Ahorro",
+  "fechaActualizacion": "2025-01-10 19:17:00"
+},
+{
+  "clave": "map-parametros:cc",
+  "valor": "Cuenta Corriente",
+  "fechaActualizacion": "2025-01-10 19:17:00"
+},
+{
+  "clave": "map-parametros:cpf",
+  "valor": "Cuenta Plazo Fijo",
+  "fechaActualizacion": "2025-01-10 19:17:00"
+},

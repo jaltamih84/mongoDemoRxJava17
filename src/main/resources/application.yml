@@ -1,6 +1,9 @@
 server:
   port: 9080
-  
+
+scheduler:
+  redisSyncJobInterval: 30000
+
 spring:
   data:
     mongodb:
@@ -10,3 +13,12 @@ spring:
       username: mongoadmin
       password: admin
       authentication-database: mongodb
+#quartz
+  quartz:
+    job-store-type: memory
+    scheduler-name: QuartzSchedulerRedis
+
+#redis
+  redis:
+    host: localhost
+    port: 6379
