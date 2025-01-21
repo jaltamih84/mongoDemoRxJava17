@@ -11,23 +11,19 @@ import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 import java.text.DateFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Component
 public class AccountMapper {
 
     public AccountEntity getAccountEntityInsertOfAccount(Account account) {
-        return AccountEntity
-                .builder()
-                .id(account.getId())
+        return AccountEntity.builder()
+                .id(UUID.randomUUID().toString())
                 .number(account.getNumber())
                 .productCode(account.getProductCode())
                 .flagComision(account.getFlagComision())
                 .maxOperation(account.getMaxOperation())
-                .startDate(account.getStartDate().toString())
+                .startDate(Utilitary.getStringFromDateFormat(new Date()))
                 .endDate(account.getEndDate().toString())
                 .balance(account.getBalance())
                 .currency(account.getCurrency())

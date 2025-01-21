@@ -20,7 +20,33 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb-reactive</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-quartz</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/io.reactivex.rxjava3/rxjava -->
@@ -28,10 +54,7 @@
             <groupId>io.reactivex.rxjava3</groupId>
             <artifactId>rxjava</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-mongodb-reactive</artifactId>
-        </dependency>
+
         <!-- https://mvnrepository.com/artifact/io.projectreactor.addons/reactor-adapter -->
         <dependency>
             <groupId>io.projectreactor.addons</groupId>
@@ -51,10 +74,13 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+
+
+
+        <!--WebFlux-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
+            <artifactId>spring-boot-starter-webflux</artifactId>
         </dependency>
 
         <!-- JUnit dependency -->
@@ -87,21 +113,9 @@
         </dependency>
 
         <dependency>
-            <groupId>io.projectreactor</groupId>
-            <artifactId>reactor-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
             <version>2.7</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.9.0</version>
         </dependency>
 
         <!-- Jakarta Validation API -->
@@ -125,15 +139,7 @@
             <version>4.0.2</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-quartz</artifactId>
-        </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>redis.clients</groupId>
@@ -179,6 +185,7 @@
                     </excludes>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
@@ -198,7 +205,7 @@
                         </goals>
                     </execution>
                 </executions>
-                <!--Exclusiones para reporte de cobertura-->
+                <!-- Umbrales de Cobertura -->
                 <configuration>
                     <rules>
                         <rule>
@@ -207,14 +214,17 @@
                                 <limit>
                                     <counter>INSTRUCTION</counter>
                                     <value>COVEREDRATIO</value>
-                                    <minimum>0.70</minimum><!-- Cobertura mínima del 70% -->
+                                    <minimum>0.80</minimum><!-- Cobertura mínima del 70% -->
                                 </limit>
                             </limits>
                         </rule>
                     </rules>
                     <excludes>
                         <!-- Excluir paquete completo -->
-                        <exclude>com/webapp/banca/demo/expose/web/*</exclude>
+                        <exclude>com/webapp/banca/demo/business/impl/*</exclude>
+                        <exclude>com/webapp/banca/demo/model/*</exclude>
+                        <exclude>com/webapp/banca/demo/job/*</exclude>
+                        <exclude>com/webapp/banca/demo/redis/config/*</exclude>
                         <!-- Excluir una clase específica -->
                         <exclude>com/webapp/banca/demo/MongoDemoRxJava17ApplicationTests.class</exclude>
                     </excludes>

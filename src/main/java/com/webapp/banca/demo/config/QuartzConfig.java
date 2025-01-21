@@ -1,4 +1,4 @@
-package com.webapp.banca.demo.redis.config;
+package com.webapp.banca.demo.config;
 
 import com.webapp.banca.demo.job.RedisSyncJob;
 import org.quartz.*;

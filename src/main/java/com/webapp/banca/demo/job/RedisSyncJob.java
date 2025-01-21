@@ -59,10 +59,14 @@ public class RedisSyncJob implements Job {
 
                 //Si el parametro de la BD Principal (Mongo), ha sido actualizado, se reemplaza en redis
                 ParameterEntity parameterRedis = redisService.get(redisKey);
-                LocalDateTime dateParameterRedis = LocalDateTime.parse(parameterRedis.getFechaActualizacion(), formatter);
-                if (dateParameterEntity.isAfter(dateParameterRedis)) {
-                    redisTemplate.opsForValue().set(redisKey, parameterEntity, 1, TimeUnit.MINUTES);
-                    System.out.println("Parametro actualizado en Redis: " + parameterEntity.getClave());
+                try {
+                    LocalDateTime dateParameterRedis = LocalDateTime.parse(parameterRedis.getFechaActualizacion(), formatter);
+                    if (dateParameterEntity.isAfter(dateParameterRedis)) {
+                        redisTemplate.opsForValue().set(redisKey, parameterEntity, 1, TimeUnit.MINUTES);
+                        System.out.println("Parametro actualizado en Redis: " + parameterEntity.getClave());
+                    }
+                } catch (RuntimeException e) {
+                    throw new RuntimeException(e);
                 }
             }
         }
